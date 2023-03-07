@@ -6,11 +6,11 @@ public class Main {
         int bonusMiles = replenishmentAmount * bonus / startingScore;// количество бонусов, которые получит клиент, за пополнение больше, чем на 1000 рублей
         int totalAmount = startingScore + replenishmentAmount + bonusMiles;// итоговая сумма
         if (replenishmentAmount > 1000) {
-            bonusMiles = replenishmentAmount * bonus / startingScore;
-        }else {
-            bonusMiles = 0;
+            bonusMiles = replenishmentAmount * bonus / startingScore;// если сумма пополнения больше 1000, бонус будет рассчитан по формуле  bonusMiles = replenishmentAmount * bonus / startingScore
+        } else {
+            bonusMiles = 0;// если сумма пополнения меньше 1000, то бонус будет равен 0
         }
-        
+
         System.out.println("Количество бонусных рублей: " + bonusMiles + " руб.");
         System.out.println("Итоговая сумма: " + totalAmount + " руб.");
     }

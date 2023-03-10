@@ -3,7 +3,7 @@ public class Main {
         int startingScore = 100; //начальный счет
         int replenishmentAmount = 1100; // сумма пополнения
         int bonus = 1; // количество бонусов за каждые 100 рублей
-        int bonusMiles = replenishmentAmount * bonus / startingScore;// количество бонусов, которые получит клиент, за пополнение больше, чем на 1000 рублей
+        int bonusMiles = replenishmentAmount * bonus / 100;// количество бонусов, которые получит клиент, за пополнение больше, чем на 1000 рублей
         int totalAmount = startingScore + replenishmentAmount + bonusMiles;// итоговая сумма
         if (replenishmentAmount > 1000) {
             bonusMiles = replenishmentAmount * bonus / startingScore;// если сумма пополнения больше 1000, бонус будет рассчитан по формуле  bonusMiles = replenishmentAmount * bonus / startingScore
